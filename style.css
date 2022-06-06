@@ -34,7 +34,7 @@ img {
 }
 
 .place-items-center {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -67,4 +67,52 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* for media query overflow-x: hidden; */
+}
+
+/* ////////////////////////////////////////////// */
+
+.calculator-size {
+  height: 100vh;
+  width: 100vw;
+}
+
+.buttons {
+  width: 28%;
+  height: 90vh;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.button:active {
+  font-size: 3.3rem;
+  background-color: rgb(224, 224, 224);
+}
+
+#top-screen {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+#bot-screen {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+#screen:active {
+  font-size: inherit;
+  background-color: rgb(224, 224, 224);
 }
